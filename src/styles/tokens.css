@@ -1,0 +1,41 @@
+:root {
+  /* Backgrounds */
+  --color-bg:         #07090f;
+  --color-surface:    #0a0c14;
+  --color-surface-2:  #0e1020;
+  --color-surface-3:  #131828;
+
+  /* Borders */
+  --color-border:     #13162a;
+  --color-border-2:   #1e2448;
+
+  /* Gold */
+  --color-gold:       #c9a84c;
+  --color-gold-dim:   #8b6b20;
+  --color-gold-bright:#e8d090;
+  --color-gold-glow:  rgba(201, 168, 76, 0.25);
+
+  /* Text */
+  --color-text:       #8899cc;
+  --color-text-dim:   #4a5070;
+  --color-text-muted: #2a3050;
+
+  /* Status */
+  --color-success:    #44cc88;
+  --color-danger:     #cc4444;
+
+  /* Typography */
+  --font-pixel: 'Press Start 2P', monospace;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+
+  /* Safe areas (iPhone home indicator / notch) */
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top:    env(safe-area-inset-top, 0px);
+}
