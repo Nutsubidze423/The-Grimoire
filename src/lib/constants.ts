@@ -1,3 +1,5 @@
+import type { QuestDifficulty, QuestCategory } from '../types'
+
 export const STAT_KEYS = [
   'strength',
   'intelligence',
@@ -60,4 +62,22 @@ export const DEFAULT_STATS: Record<typeof STAT_KEYS[number], number> = {
   strength: 0, intelligence: 0, agility: 0, wisdom: 0,
   discipline: 0, vitality: 0, creativity: 0, charisma: 0,
   serenity: 0, endurance: 0, courage: 0,
+}
+
+export const XP_BY_DIFFICULTY: Record<QuestDifficulty, number> = {
+  Easy: 10,
+  Medium: 25,
+  Hard: 50,
+  Legendary: 100,
+}
+
+export const QUEST_CATEGORIES: QuestCategory[] = [
+  'Personal', 'Work', 'Errands', 'Health', 'Finance', 'Social', 'Learning', 'Custom',
+]
+
+export const DIFFICULTY_COLORS: Record<QuestDifficulty, string> = {
+  Easy: '#44cc88',
+  Medium: '#c9a84c',
+  Hard: '#cc4444',
+  Legendary: '#8844cc',
 }

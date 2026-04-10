@@ -1,0 +1,114 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  color: var(--color-text);
+  cursor: default;
+  user-select: none;
+}
+
+.row + .row {
+  border-top: none;
+}
+
+.completed {
+  opacity: 0.5;
+}
+
+.completed .name {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+}
+
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  flex-shrink: 0;
+}
+
+.name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.category {
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.xp {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--color-gold);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.deleteBtn {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-error);
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  padding: 2px 4px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.deleteBtn:hover {
+  background: var(--color-error);
+  color: var(--color-bg);
+}
+
+.completeBtn {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  padding: 2px 5px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.completeBtnDone {
+  color: var(--color-success);
+  border-color: var(--color-success);
+  cursor: default;
+}
+
+.completeBtn:not(.completeBtnDone):hover {
+  border-color: var(--color-success);
+  color: var(--color-success);
+}

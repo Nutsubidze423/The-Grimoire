@@ -22,3 +22,20 @@ export interface UserStats {
   stats: StatValues
   updatedAt: string
 }
+
+export type QuestDifficulty = 'Easy' | 'Medium' | 'Hard' | 'Legendary'
+export type QuestType = 'daily' | 'oneoff' | 'boss' | 'side'
+export type QuestCategory = 'Personal' | 'Work' | 'Errands' | 'Health' | 'Finance' | 'Social' | 'Learning' | 'Custom'
+
+export interface Quest {
+  id: string
+  user_id: string
+  name: string
+  difficulty: QuestDifficulty
+  category: QuestCategory
+  quest_type: QuestType
+  due_date: string | null
+  completed_at: string | null
+  xp_reward: number
+  created_at: string
+}

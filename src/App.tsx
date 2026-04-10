@@ -3,27 +3,35 @@ import { RouterProvider } from 'react-router-dom'
 import { supabase } from './lib/supabase'
 import { useAuthStore } from './stores/authStore'
 import { useUserStore } from './stores/userStore'
+import { useQuestStore } from './stores/questStore'
 import { router } from './router'
 
 export function App() {
   const setSession = useAuthStore(s => s.setSession)
   const fetchUserData = useUserStore(s => s.fetchUserData)
+  const fetchQuests = useQuestStore(s => s.fetchQuests)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
       setSession(data.session)
-      if (data.session) fetchUserData(data.session.user.id)
+      if (data.session) {
+        fetchUserData(data.session.user.id)
+        fetchQuests(data.session.user.id)
+      }
     })
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event, session) => {
         setSession(session)
-        if (session) fetchUserData(session.user.id)
+        if (session) {
+          fetchUserData(session.user.id)
+          fetchQuests(session.user.id)
+        }
       }
     )
 
     return () => subscription.unsubscribe()
-  }, [setSession, fetchUserData])
+  }, [setSession, fetchUserData, fetchQuests])
 
   return <RouterProvider router={router} />
 }

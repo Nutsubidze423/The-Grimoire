@@ -3,7 +3,7 @@ import { AppShell } from './components/layout/AppShell'
 import { AuthGuard } from './components/auth/AuthGuard'
 import { LoginScreen } from './components/auth/LoginScreen'
 import { OnboardingScreen } from './components/auth/OnboardingScreen'
-import { QuestsPlaceholder } from './components/placeholders/QuestsPlaceholder'
+import { QuestsScreen } from './components/quests/QuestsScreen'
 import { VaultPlaceholder } from './components/placeholders/VaultPlaceholder'
 import { CharacterPlaceholder } from './components/placeholders/CharacterPlaceholder'
 
@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Navigate to="/hub" replace /> },
       { path: 'hub', element: <Suspense fallback={null}><LazyHub /></Suspense> },
-      { path: 'quests', element: <QuestsPlaceholder /> },
+      { path: 'quests', element: <QuestsScreen /> },
       { path: 'vault', element: <VaultPlaceholder /> },
       { path: 'character', element: <CharacterPlaceholder /> },
     ],
