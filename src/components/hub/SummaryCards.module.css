@@ -1,0 +1,39 @@
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  padding: 8px var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.card {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-2);
+  border-radius: 3px;
+  padding: 8px 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-glow), transparent);
+}
+
+.value {
+  font-size: 10px;
+  color: var(--color-gold);
+  letter-spacing: 1px;
+}
+
+.label {
+  font-size: 5px;
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+}

@@ -1,0 +1,64 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  padding: var(--space-2) var(--space-3);
+  gap: var(--space-2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.username {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  color: var(--color-gold);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.level {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-gold);
+  padding: 2px 6px;
+  white-space: nowrap;
+}
+
+.portrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-1) 0;
+}
+
+.xp {
+  flex-shrink: 0;
+}
+
+.summary {
+  flex-shrink: 0;
+}
+
+.stats {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}

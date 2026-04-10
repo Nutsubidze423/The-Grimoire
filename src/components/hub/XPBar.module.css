@@ -1,0 +1,21 @@
+.wrap {
+  padding: 10px var(--space-5) 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-size: 6px;
+  color: var(--color-text-dim);
+  letter-spacing: 2px;
+}
+
+.value {
+  font-size: 6px;
+  color: var(--color-gold);
+}
