@@ -70,3 +70,17 @@ export interface SavingsVault {
   created_at: string
   updated_at: string
 }
+
+export type WorkoutIntensity = 'Light' | 'Medium' | 'Heavy'
+export type MuscleGroup = 'Chest' | 'Back' | 'Legs' | 'Shoulders' | 'Arms' | 'Core' | 'Cardio' | 'Full Body'
+
+export interface Workout {
+  id: string
+  user_id: string
+  exercise_name: string
+  muscle_group: MuscleGroup
+  intensity: WorkoutIntensity
+  xp_reward: number
+  logged_at: string
+  created_at: string
+}

@@ -6,6 +6,7 @@ import styles from './TabBar.module.css'
 const TABS = [
   { to: '/hub',       icon: '⌂', label: 'HUB' },
   { to: '/quests',    icon: '≡', label: 'QUESTS' },
+  { to: '/training',  icon: '◎', label: 'TRAIN' },
   { to: '/vault',     icon: '◈', label: 'VAULT' },
   { to: '/character', icon: '⚔', label: 'CHAR' },
 ] as const
@@ -41,7 +42,7 @@ export function TabBar() {
 
       <Modal open={quickAddOpen} onClose={() => setQuickAddOpen(false)}>
         <p className={styles.comingSoon}>QUICK ADD</p>
-        <p className={styles.comingSoonSub}>Quest · Expense · Workout — Phase 2</p>
+        <p className={styles.comingSoonSub}>Quest · Expense · Workout</p>
       </Modal>
     </>
   )

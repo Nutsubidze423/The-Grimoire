@@ -1,4 +1,4 @@
-import type { QuestDifficulty, QuestCategory, ExpenseCategory } from '../types'
+import type { QuestDifficulty, QuestCategory, ExpenseCategory, WorkoutIntensity, MuscleGroup } from '../types'
 
 export const STAT_KEYS = [
   'strength',
@@ -107,4 +107,31 @@ export const CATEGORY_COLORS: Record<ExpenseCategory, string> = {
 export function getCurrentMonthYear(): string {
   const d = new Date()
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`
+}
+
+export const MUSCLE_GROUPS: MuscleGroup[] = [
+  'Chest', 'Back', 'Legs', 'Shoulders', 'Arms', 'Core', 'Cardio', 'Full Body',
+]
+
+export const MUSCLE_GROUP_ICONS: Record<MuscleGroup, string> = {
+  'Chest':     '◈',
+  'Back':      '▣',
+  'Legs':      '▼',
+  'Shoulders': '▲',
+  'Arms':      '◉',
+  'Core':      '✦',
+  'Cardio':    '◎',
+  'Full Body': '✧',
+}
+
+export const XP_BY_INTENSITY: Record<WorkoutIntensity, number> = {
+  Light:  5,
+  Medium: 15,
+  Heavy:  30,
+}
+
+export const INTENSITY_COLORS: Record<WorkoutIntensity, string> = {
+  Light:  '#44cc88',
+  Medium: '#c9a84c',
+  Heavy:  '#cc4444',
 }

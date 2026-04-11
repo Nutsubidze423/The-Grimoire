@@ -1,0 +1,89 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  font-family: var(--font-pixel);
+}
+
+.row + .row {
+  border-top: none;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+}
+
+.icon {
+  font-size: 12px;
+  flex-shrink: 0;
+  color: var(--color-gold);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.name {
+  font-size: 8px;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.group {
+  font-size: 6px;
+  color: var(--color-text-muted);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.intensity {
+  font-size: 6px;
+  border: 1px solid;
+  padding: 2px 4px;
+  line-height: 1;
+}
+
+.xp {
+  font-size: 7px;
+  color: var(--color-gold);
+}
+
+.time {
+  font-size: 6px;
+  color: var(--color-text-muted);
+}
+
+.deleteBtn {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-error);
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  padding: 2px 4px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.deleteBtn:hover {
+  background: var(--color-error);
+  color: var(--color-bg);
+}

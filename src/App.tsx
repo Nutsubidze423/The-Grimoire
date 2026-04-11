@@ -5,6 +5,7 @@ import { useAuthStore } from './stores/authStore'
 import { useUserStore } from './stores/userStore'
 import { useQuestStore } from './stores/questStore'
 import { useTreasuryStore } from './stores/treasuryStore'
+import { useWorkoutStore } from './stores/workoutStore'
 import { router } from './router'
 
 export function App() {
@@ -12,6 +13,7 @@ export function App() {
   const fetchUserData = useUserStore(s => s.fetchUserData)
   const fetchQuests = useQuestStore(s => s.fetchQuests)
   const fetchTreasury = useTreasuryStore(s => s.fetchTreasury)
+  const fetchWorkouts = useWorkoutStore(s => s.fetchWorkouts)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -20,6 +22,7 @@ export function App() {
         fetchUserData(data.session.user.id)
         fetchQuests(data.session.user.id)
         fetchTreasury(data.session.user.id)
+        fetchWorkouts(data.session.user.id)
       }
     })
 
@@ -30,12 +33,13 @@ export function App() {
           fetchUserData(session.user.id)
           fetchQuests(session.user.id)
           fetchTreasury(session.user.id)
+          fetchWorkouts(session.user.id)
         }
       }
     )
 
     return () => subscription.unsubscribe()
-  }, [setSession, fetchUserData, fetchQuests, fetchTreasury])
+  }, [setSession, fetchUserData, fetchQuests, fetchTreasury, fetchWorkouts])
 
   return <RouterProvider router={router} />
 }
