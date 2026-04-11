@@ -4,7 +4,7 @@ import { AuthGuard } from './components/auth/AuthGuard'
 import { LoginScreen } from './components/auth/LoginScreen'
 import { OnboardingScreen } from './components/auth/OnboardingScreen'
 import { QuestsScreen } from './components/quests/QuestsScreen'
-import { VaultPlaceholder } from './components/placeholders/VaultPlaceholder'
+import { TreasuryScreen } from './components/treasury/TreasuryScreen'
 import { CharacterPlaceholder } from './components/placeholders/CharacterPlaceholder'
 
 // HubScreen added after Task 13 — import lazily to avoid circular dep during dev
@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
       { index: true, element: <Navigate to="/hub" replace /> },
       { path: 'hub', element: <Suspense fallback={null}><LazyHub /></Suspense> },
       { path: 'quests', element: <QuestsScreen /> },
-      { path: 'vault', element: <VaultPlaceholder /> },
+      { path: 'vault', element: <TreasuryScreen /> },
       { path: 'character', element: <CharacterPlaceholder /> },
     ],
   },

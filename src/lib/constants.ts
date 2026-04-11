@@ -1,4 +1,4 @@
-import type { QuestDifficulty, QuestCategory } from '../types'
+import type { QuestDifficulty, QuestCategory, ExpenseCategory } from '../types'
 
 export const STAT_KEYS = [
   'strength',
@@ -80,4 +80,31 @@ export const DIFFICULTY_COLORS: Record<QuestDifficulty, string> = {
   Medium: '#c9a84c',
   Hard: '#cc4444',
   Legendary: '#8844cc',
+}
+
+export const EXPENSE_CATEGORIES: ExpenseCategory[] = [
+  'Food & Dining', 'Transport', 'Shopping', 'Bills & Utilities', 'Entertainment', 'Custom',
+]
+
+export const CATEGORY_ICONS: Record<ExpenseCategory, string> = {
+  'Food & Dining': '◈',
+  'Transport': '▶',
+  'Shopping': '◆',
+  'Bills & Utilities': '✦',
+  'Entertainment': '◉',
+  'Custom': '✧',
+}
+
+export const CATEGORY_COLORS: Record<ExpenseCategory, string> = {
+  'Food & Dining': '#c9a84c',
+  'Transport': '#44cc88',
+  'Shopping': '#cc6699',
+  'Bills & Utilities': '#4466cc',
+  'Entertainment': '#8844cc',
+  'Custom': '#888888',
+}
+
+export function getCurrentMonthYear(): string {
+  const d = new Date()
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`
 }

@@ -39,3 +39,34 @@ export interface Quest {
   xp_reward: number
   created_at: string
 }
+
+export type ExpenseCategory = 'Food & Dining' | 'Transport' | 'Shopping' | 'Bills & Utilities' | 'Entertainment' | 'Custom'
+
+export interface Budget {
+  id: string
+  user_id: string
+  category: ExpenseCategory
+  month_year: string   // 'YYYY-MM'
+  limit_amount: number
+  created_at: string
+}
+
+export interface Expense {
+  id: string
+  user_id: string
+  category: ExpenseCategory
+  amount: number
+  note: string | null
+  expense_date: string  // 'YYYY-MM-DD'
+  created_at: string
+}
+
+export interface SavingsVault {
+  id: string
+  user_id: string
+  goal_name: string
+  goal_amount: number
+  saved_amount: number
+  created_at: string
+  updated_at: string
+}

@@ -4,12 +4,14 @@ import { supabase } from './lib/supabase'
 import { useAuthStore } from './stores/authStore'
 import { useUserStore } from './stores/userStore'
 import { useQuestStore } from './stores/questStore'
+import { useTreasuryStore } from './stores/treasuryStore'
 import { router } from './router'
 
 export function App() {
   const setSession = useAuthStore(s => s.setSession)
   const fetchUserData = useUserStore(s => s.fetchUserData)
   const fetchQuests = useQuestStore(s => s.fetchQuests)
+  const fetchTreasury = useTreasuryStore(s => s.fetchTreasury)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -17,6 +19,7 @@ export function App() {
       if (data.session) {
         fetchUserData(data.session.user.id)
         fetchQuests(data.session.user.id)
+        fetchTreasury(data.session.user.id)
       }
     })
 
@@ -26,12 +29,13 @@ export function App() {
         if (session) {
           fetchUserData(session.user.id)
           fetchQuests(session.user.id)
+          fetchTreasury(session.user.id)
         }
       }
     )
 
     return () => subscription.unsubscribe()
-  }, [setSession, fetchUserData, fetchQuests])
+  }, [setSession, fetchUserData, fetchQuests, fetchTreasury])
 
   return <RouterProvider router={router} />
 }

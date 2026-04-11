@@ -1,0 +1,88 @@
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-gold);
+  padding: var(--space-2) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.icon {
+  font-size: 14px;
+  color: var(--color-gold);
+}
+
+.name {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: var(--color-gold);
+  flex: 1;
+}
+
+.pct {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--color-text-muted);
+}
+
+.bar { width: 100%; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.adj {
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  color: var(--color-gold);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amounts {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--color-text);
+  flex: 1;
+  text-align: center;
+}
+
+.setupForm {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.input {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 6px 8px;
+  flex: 1;
+  outline: none;
+}
+
+.setBtn {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--color-bg);
+  background: var(--color-gold);
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}

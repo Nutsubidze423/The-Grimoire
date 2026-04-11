@@ -1,0 +1,122 @@
+.card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  padding: var(--space-3);
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.15s;
+}
+
+.card:hover {
+  border-color: var(--color-gold);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.icon {
+  font-size: 14px;
+  color: var(--color-gold);
+}
+
+.name {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--color-text);
+  letter-spacing: 0.05em;
+  flex: 1;
+  text-transform: uppercase;
+}
+
+.cursed {
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  color: var(--color-error);
+  border: 1px solid var(--color-error);
+  padding: 2px 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.bar {
+  margin-bottom: var(--space-2);
+}
+
+.noLimit {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--space-2) 0;
+  border: 1px dashed var(--color-border);
+  margin-bottom: var(--space-2);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footerText {
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  color: var(--color-text-muted);
+}
+
+.editor {
+  display: flex;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+  align-items: center;
+}
+
+.input {
+  flex: 1;
+  background: var(--color-bg);
+  border: 1px solid var(--color-gold);
+  color: var(--color-text);
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  padding: 4px 6px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.confirm {
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.confirm:hover {
+  opacity: 0.85;
+}
+
+.cancel {
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  background: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  color: var(--color-error);
+  border-color: var(--color-error);
+}

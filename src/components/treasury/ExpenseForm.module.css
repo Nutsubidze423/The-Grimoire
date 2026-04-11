@@ -1,0 +1,90 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-3);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.label {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+.input {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 8px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus { border-color: var(--color-gold); }
+
+.inputError { border-color: var(--color-error); }
+
+.errorMsg {
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  color: var(--color-error);
+}
+
+.btnGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-1);
+}
+
+.catBtn {
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 6px 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.catBtnActive {
+  background: var(--color-surface);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+  padding-top: var(--space-1);
+}
+
+.cancelBtn {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: 8px 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.submitBtn {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--color-bg);
+  background: var(--color-gold);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  flex: 2;
+}
